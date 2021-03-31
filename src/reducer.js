@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import {
   SET_LOADING,
   SET_STORIES,
@@ -6,5 +7,10 @@ import {
   HANDLE_SEARCH,
 } from './actions'
 
-const reducer = () => {}
+const reducer = (state, action) => {
+  switch(action.type) {
+    case 'SET_LOADING':
+      return { ...state, isLoading: true }
+  }
+}
 export default reducer
